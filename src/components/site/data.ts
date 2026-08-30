@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     id: "arch",
     title: "Western Vintage Archway",
-    category: "Branding",
+    category: "Photography",
     year: "2025",
     image: photo7.url,
   },

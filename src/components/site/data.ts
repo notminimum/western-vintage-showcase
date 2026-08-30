@@ -6,7 +6,7 @@ import reel1 from "@/assets/reel_1.mp4.asset.json";
 import reel2 from "@/assets/reel_2.mp4.asset.json";
 import reel3 from "@/assets/reel_3.mp4.asset.json";
 
-export const categories = ["All", "Photography", "Branding", "Products", "Editorial"] as const;
+export const categories = ["All", "Photography", "Editorial"] as const;
 export type Category = (typeof categories)[number];
 
 export type Project = {

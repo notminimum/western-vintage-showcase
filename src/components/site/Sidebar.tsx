@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Instagram, Music2, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { cn } from "@/lib/utils";
 
@@ -31,17 +30,17 @@ export function Sidebar() {
   }, []);
 
   const nav = (
-    <nav className="flex flex-col gap-1">
+    <nav className="flex flex-col">
       {links.map((l) => (
         <a
           key={l.id}
           href={`#${l.id}`}
           onClick={() => setOpen(false)}
           className={cn(
-            "rounded-xl px-4 py-2.5 text-sm font-medium tracking-wide transition-colors",
+            "border-b border-cream/15 px-1 py-3 text-xs font-semibold uppercase tracking-[0.14em]",
             active === l.id
-              ? "bg-gold text-ink"
-              : "text-cream/70 hover:bg-cream/10 hover:text-cream",
+              ? "text-gold"
+              : "text-cream/70",
           )}
         >
           {l.label}
@@ -52,25 +51,23 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Mobile bar */}
-      <header className="surface-ink sticky top-0 z-50 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 lg:hidden">
+      <header className="surface-ink sticky top-0 z-50 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-cream/15 px-5 py-3 lg:hidden">
         <a href="#home" className="min-w-0">
           <img src={logo} alt="Western Vintage" width={1152} height={576} className="h-9 w-auto" />
         </a>
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="shrink-0 rounded-lg border border-cream/20 p-2 text-cream"
+          className="grid size-10 shrink-0 place-items-center border border-cream/30 text-cream"
         >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          <span aria-hidden className="text-xl leading-none">{open ? "×" : "≡"}</span>
         </button>
       </header>
       {open && (
-        <div className="surface-ink reveal sticky top-[60px] z-40 px-4 pb-5 lg:hidden">{nav}</div>
+        <div className="surface-ink sticky top-[65px] z-40 px-5 pb-5 lg:hidden">{nav}</div>
       )}
 
-      {/* Desktop sidebar */}
-      <aside className="surface-ink fixed left-0 top-0 z-50 hidden h-screen w-64 flex-col justify-between px-5 py-8 lg:flex">
+      <aside className="surface-ink fixed left-0 top-0 z-50 hidden h-screen w-64 flex-col justify-between border-r border-cream/15 px-6 py-8 lg:flex">
         <div>
           <a href="#home" className="block">
             <img
@@ -87,21 +84,20 @@ export function Sidebar() {
           <div className="mt-8">{nav}</div>
         </div>
         <div className="space-y-4 px-1">
-          <div className="flex gap-3 text-cream/60">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-cream/60">
             <a
               href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
-              className="hover:text-gold"
             >
-              <Instagram className="size-5" />
+              Instagram
             </a>
-            <a href="#contact" aria-label="TikTok" className="hover:text-gold">
-              <Music2 className="size-5" />
+            <a href="#contact" aria-label="TikTok">
+              TikTok
             </a>
-            <a href="mailto:hello@westernvintage.com" aria-label="Email" className="hover:text-gold">
-              <Mail className="size-5" />
+            <a href="mailto:hello@westernvintage.com" aria-label="Email">
+              Email
             </a>
           </div>
           <p className="text-[11px] leading-relaxed text-cream/40">

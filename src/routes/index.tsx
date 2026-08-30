@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Sidebar } from "@/components/site/Sidebar";
 import { Portfolio } from "@/components/site/Portfolio";
-import { About, Contact, Footer, Hero, Services, Stats } from "@/components/site/Sections";
+import { About, Contact, Footer, Hero, Services } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +29,6 @@ function Index() {
       <Sidebar />
       <main className="lg:pl-64">
         <Hero />
-        <Stats />
         <Portfolio />
         <About />
         <Services />

@@ -150,16 +150,29 @@ export function Contact() {
             Tell us what you're building. We reply within two working days.
           </p>
           <div className="mt-7 flex gap-3">
-            {[Instagram, Music2, Mail].map((Icon, i) => (
-              <a
-                key={i}
-                href="#contact"
-                aria-label="Social link"
-                className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Icon className="size-5" />
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Instagram className="size-5" />
+            </a>
+            <a
+              href="#contact"
+              aria-label="TikTok"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Music2 className="size-5" />
+            </a>
+            <a
+              href="mailto:hello@westernvintage.com"
+              aria-label="Email"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Mail className="size-5" />
+            </a>
           </div>
         </div>
         <form
@@ -221,13 +234,19 @@ export function Footer() {
         </p>
       </div>
       <div className="flex shrink-0 gap-3 text-muted-foreground">
-        <a href="#contact" aria-label="Instagram" className="hover:text-gold-deep">
+        <a
+          href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+          className="hover:text-gold-deep"
+        >
           <Instagram className="size-5" />
         </a>
         <a href="#contact" aria-label="TikTok" className="hover:text-gold-deep">
           <Music2 className="size-5" />
         </a>
-        <a href="#contact" aria-label="Email" className="hover:text-gold-deep">
+        <a href="mailto:hello@westernvintage.com" aria-label="Email" className="hover:text-gold-deep">
           <Mail className="size-5" />
         </a>
       </div>

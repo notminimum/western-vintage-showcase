@@ -6,15 +6,16 @@ import reel1 from "@/assets/reel_1.mp4.asset.json";
 import reel2 from "@/assets/reel_2.mp4.asset.json";
 import reel3 from "@/assets/reel_3.mp4.asset.json";
 
-export type Category = "Photography" | "Branding" | "Products" | "Events";
+export const categories = ["All", "Photography", "Branding", "Products", "Editorial"] as const;
+export type Category = (typeof categories)[number];
 
 export type Project = {
   id: string;
   title: string;
-  category: Category;
+  category: Exclude<Category, "All">;
   year: string;
   image: string;
-  span: "tall" | "wide" | "normal";
+  tall?: boolean;
 };
 
 export const projects: Project[] = [
@@ -24,7 +25,7 @@ export const projects: Project[] = [
     category: "Photography",
     year: "2025",
     image: photo1.url,
-    span: "tall",
+    tall: true,
   },
   {
     id: "crew",
@@ -32,15 +33,14 @@ export const projects: Project[] = [
     category: "Editorial",
     year: "2025",
     image: photo2.url,
-    span: "wide",
-  } as unknown as Project,
+  },
   {
     id: "denim",
     title: "Denim & Cowboy Boots",
     category: "Products",
     year: "2025",
     image: photo6.url,
-    span: "tall",
+    tall: true,
   },
   {
     id: "arch",
@@ -48,7 +48,6 @@ export const projects: Project[] = [
     category: "Branding",
     year: "2025",
     image: photo7.url,
-    span: "normal",
   },
 ];
 
@@ -58,11 +57,28 @@ export const reels = [
   { id: "r3", title: "Street Style Cuts", url: reel3.url },
 ];
 
-export const categories = ["All", "Photography", "Branding", "Products", "Editorial"] as const;
-
 export const stats = [
   { label: "Years active", value: "6" },
   { label: "Projects shipped", value: "120+" },
   { label: "Brands styled", value: "45" },
   { label: "Pieces rehomed", value: "9.4k" },
+];
+
+export const services = [
+  {
+    title: "Vintage Sourcing",
+    copy: "Archive digs across markets and estates, curated into wearable, one-of-one racks.",
+  },
+  {
+    title: "Editorial Styling",
+    copy: "Full looks built for shoots, runways and gala stages — silhouette first, always.",
+  },
+  {
+    title: "Brand & Set Design",
+    copy: "Signage, archways and identity systems that carry a retro-Americana feel.",
+  },
+  {
+    title: "Event Production",
+    copy: "Pop-ups and galas end to end: vendors, stage, sound, crowd flow, documentation.",
+  },
 ];

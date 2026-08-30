@@ -88,13 +88,19 @@ export function Sidebar() {
         </div>
         <div className="space-y-4 px-1">
           <div className="flex gap-3 text-cream/60">
-            <a href="#contact" aria-label="Instagram" className="hover:text-gold">
+            <a
+              href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="hover:text-gold"
+            >
               <Instagram className="size-5" />
             </a>
             <a href="#contact" aria-label="TikTok" className="hover:text-gold">
               <Music2 className="size-5" />
             </a>
-            <a href="#contact" aria-label="Email" className="hover:text-gold">
+            <a href="mailto:hello@westernvintage.com" aria-label="Email" className="hover:text-gold">
               <Mail className="size-5" />
             </a>
           </div>

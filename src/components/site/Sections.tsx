@@ -84,21 +84,14 @@ export function About() {
         />
       </div>
       <div className="mt-8 lg:mt-0">
-        <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">The story</p>
-        <h2 className="text-display mt-2 text-3xl sm:text-4xl">
-          Second-hand, never second-best
-        </h2>
+        <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">About us</p>
+        <h2 className="text-display mt-2 text-3xl sm:text-4xl">Lifestyle & culture of the West</h2>
         <p className="mt-5 leading-relaxed text-muted-foreground">
-          Western Vintage started as a single rack at a Sunday market and grew into a gala. We dig
-          through bales for the pieces with a pulse — paint-splashed knits, cowboy boots, cropped
-          workwear — then style them into looks that read as personal, not costume.
-        </p>
-        <p className="mt-4 leading-relaxed text-muted-foreground">
-          Every drop is documented: photographed, filmed and archived, so the clothes keep their
-          story after they leave the rack.
+          Western Vintage is a youth-focused lifestyle and cultural experience celebrating vintage
+          fashion, music, creativity, games, food and the unique culture of the Western Region.
         </p>
         <div className="mt-7 flex flex-wrap gap-2">
-          {["Sourcing", "Styling", "Photography", "Events"].map((t) => (
+          {["Vintage Fashion", "Music", "Creativity", "Games", "Food", "Culture"].map((t) => (
             <span
               key={t}
               className="rounded-full border border-gold/60 px-3 py-1 text-xs font-medium text-gold-deep"

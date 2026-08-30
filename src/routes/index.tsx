@@ -29,7 +29,6 @@ function Index() {
       <Sidebar />
       <main className="lg:pl-64">
         <Hero />
-        <Stats />
         <Portfolio />
         <About />
         <Services />

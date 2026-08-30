@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     id: "denim",
     title: "Denim & Cowboy Boots",
-    category: "Products",
+    category: "Editorial",
     year: "2025",
     image: photo6.url,
     tall: true,

@@ -71,7 +71,7 @@ export const services = [
   },
   {
     title: "Editorial Styling",
-    copy: "Full looks built for shoots, runways and gala stages — silhouette first, always.",
+    copy: "Full looks built for shoots, runways and gala stages, with silhouette considered first.",
   },
   {
     title: "Brand & Set Design",

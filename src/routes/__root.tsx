@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Western Vintage — Curated Vintage Studio" },
+      { title: "Western Vintage | Cultural Portfolio" },
       {
         name: "description",
         content:
           "Western Vintage: curated vintage sourcing, editorial styling and event production.",
       },
       { name: "author", content: "Western Vintage" },
-      { property: "og:title", content: "Western Vintage — Curated Vintage Studio" },
+      { property: "og:title", content: "Western Vintage | Cultural Portfolio" },
       {
         property: "og:description",
         content:

@@ -21,7 +21,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "host",
-    title: "Gala Host — Paint-Splash Set",
+    title: "Gala Host: Paint-Splash Set",
     category: "Photography",
     year: "2025",
     image: photo1.url,
@@ -71,7 +71,7 @@ export const services = [
   },
   {
     title: "Editorial Styling",
-    copy: "Full looks built for shoots, runways and gala stages — silhouette first, always.",
+    copy: "Full looks built for shoots, runways and gala stages, with silhouette considered first.",
   },
   {
     title: "Brand & Set Design",

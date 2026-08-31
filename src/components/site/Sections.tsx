@@ -30,24 +30,6 @@ export function Hero() {
   );
 }
 
-export function Stats() {
-  return (
-    <section className="grid grid-cols-2 gap-4 px-5 py-10 sm:px-8 lg:grid-cols-4 lg:px-12">
-      {stats.map((s) => (
-        <div
-          key={s.label}
-          className="card-lift rounded-2xl border border-border bg-card px-5 py-6 shadow-[var(--shadow-card)]"
-        >
-          <p className="text-display text-3xl text-gold-deep">{s.value}</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-            {s.label}
-          </p>
-        </div>
-      ))}
-    </section>
-  );
-}
-
 export function About() {
   return (
     <section
@@ -74,29 +56,6 @@ export function About() {
             <span key={t} className={`border-b border-border py-3 ${i % 2 === 0 ? "pr-3" : "pl-3 sm:pl-0"}`}>{t}</span>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-export function Services() {
-  return (
-    <section id="services" className="scroll-mt-24 px-5 py-16 sm:px-8 lg:px-12">
-      <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">What we do</p>
-      <h2 className="text-display mt-2 text-3xl sm:text-4xl">Services</h2>
-      <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        {services.map((s, i) => (
-          <div
-            key={s.title}
-            className="card-lift rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)]"
-          >
-            <span className="text-display text-sm text-gold-deep">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="text-display mt-3 text-xl">{s.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-          </div>
-        ))}
       </div>
     </section>
   );
@@ -147,7 +106,7 @@ export function Contact() {
             setTimeout(() => {
               setSending(false);
               (e.target as HTMLFormElement).reset();
-              toast.success("Message sent — we'll be in touch soon.");
+              toast.success("Message sent. We will be in touch soon.");
             }, 600);
           }}
         >

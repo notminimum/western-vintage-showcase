@@ -6,13 +6,13 @@ import { About, Contact, Footer, Hero } from "@/components/site/Sections";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Western Vintage — Curated Vintage Studio & Styling Portfolio" },
+      { title: "Western Vintage | Culture and Style Portfolio" },
       {
         name: "description",
         content:
           "Western Vintage is a Ghana-based vintage studio: rare sourced pieces, editorial styling, brand and set design, and event production. Browse the archive.",
       },
-      { property: "og:title", content: "Western Vintage — Curated Vintage Studio" },
+      { property: "og:title", content: "Western Vintage | Cultural Portfolio" },
       {
         property: "og:description",
         content:

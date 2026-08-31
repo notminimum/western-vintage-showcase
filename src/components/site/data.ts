@@ -21,7 +21,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "host",
-    title: "Gala Host — Paint-Splash Set",
+    title: "Gala Host: Paint-Splash Set",
     category: "Photography",
     year: "2025",
     image: photo1.url,

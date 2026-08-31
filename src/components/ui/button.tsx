@@ -5,21 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm border text-sm font-semibold cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
-        default: "border-primary bg-primary text-primary-foreground",
-        destructive: "border-destructive bg-destructive text-destructive-foreground",
+        default: "bg-primary text-primary-foreground shadow-sm hover:-translate-y-0.5 hover:shadow-md",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-input bg-background text-foreground",
-        secondary: "border-secondary bg-secondary text-secondary-foreground",
-        ghost: "border-transparent bg-transparent text-foreground",
-        link: "border-transparent text-primary underline underline-offset-4",
-        hero: "border-gold bg-gold text-ink",
-        ink: "border-ink surface-ink",
+          "border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-gold text-ink shadow-sm hover:-translate-y-0.5 hover:bg-gold/90 hover:shadow-md",
+        ink: "surface-ink shadow-sm hover:-translate-y-0.5 hover:shadow-md",
         outlineInk:
-          "border-ink bg-transparent text-ink",
+          "border border-ink bg-transparent text-ink hover:bg-ink hover:text-cream",
       },
       size: {
         default: "h-9 px-4 py-2",

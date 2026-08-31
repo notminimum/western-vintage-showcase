@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: "Libre Baskerville", Georgia, serif;
-  --font-sans: "IBM Plex Sans", Arial, sans-serif;
+  --font-display: "Alfa Slab One", Georgia, serif;
+  --font-sans: "DM Sans", Arial, sans-serif;
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-ink: var(--ink);
@@ -68,30 +68,32 @@
 }
 
 :root {
-  --radius: 0.25rem;
-  --gold: oklch(0.72 0.12 79);
-  --gold-deep: oklch(0.55 0.1 67);
-  --ink: oklch(0.2 0.006 65);
-  --cream: oklch(0.955 0.014 83);
-  --background: oklch(0.955 0.014 83);
-  --foreground: oklch(0.2 0.006 65);
-  --card: oklch(0.935 0.015 82);
-  --card-foreground: oklch(0.2 0.006 65);
-  --popover: oklch(0.955 0.014 83);
-  --popover-foreground: oklch(0.2 0.006 65);
-  --primary: oklch(0.2 0.006 65);
-  --primary-foreground: oklch(0.955 0.014 83);
-  --secondary: oklch(0.9 0.02 82);
-  --secondary-foreground: oklch(0.2 0.006 65);
-  --muted: oklch(0.9 0.02 82);
-  --muted-foreground: oklch(0.43 0.015 70);
-  --accent: oklch(0.72 0.12 79);
-  --accent-foreground: oklch(0.2 0.006 65);
+  --radius: 1rem;
+  --gold: oklch(0.82 0.13 82);
+  --gold-deep: oklch(0.72 0.14 68);
+  --ink: oklch(0.19 0.005 60);
+  --cream: oklch(0.96 0.017 88);
+  --background: oklch(0.96 0.017 88);
+  --foreground: oklch(0.19 0.005 60);
+  --card: oklch(0.99 0.008 90);
+  --card-foreground: oklch(0.19 0.005 60);
+  --popover: oklch(0.99 0.008 90);
+  --popover-foreground: oklch(0.19 0.005 60);
+  --primary: oklch(0.82 0.13 82);
+  --primary-foreground: oklch(0.19 0.005 60);
+  --secondary: oklch(0.92 0.022 88);
+  --secondary-foreground: oklch(0.19 0.005 60);
+  --muted: oklch(0.92 0.022 88);
+  --muted-foreground: oklch(0.48 0.02 75);
+  --accent: oklch(0.82 0.13 82);
+  --accent-foreground: oklch(0.19 0.005 60);
+  --shadow-card: 0 1px 2px oklch(0.19 0.005 60 / 0.06), 0 12px 32px -12px oklch(0.19 0.005 60 / 0.18);
+  --gradient-ink: linear-gradient(160deg, oklch(0.24 0.01 60), oklch(0.15 0.005 60));
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.72 0.018 76);
-  --input: oklch(0.72 0.018 76);
-  --ring: oklch(0.55 0.1 67);
+  --border: oklch(0.88 0.02 85);
+  --input: oklch(0.88 0.02 85);
+  --ring: oklch(0.82 0.13 82);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -155,13 +157,30 @@
 
 @utility text-display {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0;
 }
 
 @utility surface-ink {
-  background-color: var(--ink);
+  background-image: var(--gradient-ink);
   color: var(--cream);
+}
+
+@utility card-lift {
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@utility reveal {
+  animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 html { scroll-behavior: smooth; }

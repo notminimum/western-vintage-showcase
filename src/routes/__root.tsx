@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Western Vintage | Cultural Portfolio" },
+      { title: "Western Vintage — Curated Vintage Studio" },
       {
         name: "description",
         content:
           "Western Vintage: curated vintage sourcing, editorial styling and event production.",
       },
       { name: "author", content: "Western Vintage" },
-      { property: "og:title", content: "Western Vintage | Cultural Portfolio" },
+      { property: "og:title", content: "Western Vintage — Curated Vintage Studio" },
       {
         property: "og:description",
         content:
@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;700&display=swap",
       },
     ],
   }),

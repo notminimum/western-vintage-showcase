@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { categories, projects, reels, type Category } from "./data";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export function Portfolio() {
   const [filter, setFilter] = useState<Category>("All");

@@ -27,10 +27,11 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Sidebar />
-      <main>
+      <main className="lg:pl-64">
         <Hero />
         <Portfolio />
         <About />
+        
         <Contact />
         <Footer />
       </main>

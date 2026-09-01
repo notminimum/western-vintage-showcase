@@ -1,3 +1,4 @@
+import { Instagram, Music2, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -11,22 +12,25 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="scroll-mt-24 border-b border-border px-5 py-16 sm:px-8 lg:px-12 lg:py-24"
+      className="surface-ink relative scroll-mt-24 overflow-hidden rounded-b-[2.5rem] px-5 pb-16 pt-14 sm:px-8 lg:px-12 lg:pt-20"
     >
-      <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-end">
-        <div>
-        <p className="section-label">Vintage fashion / music / culture</p>
+      <div
+        aria-hidden
+        className="absolute -right-24 -top-24 size-80 rounded-full bg-gold/20 blur-3xl"
+      />
+      <div className="relative max-w-3xl">
+        <p className="text-[11px] uppercase tracking-[0.3em] text-gold">
+          Curated thrift · Styling · Culture
+        </p>
         <img
           src={logo}
           alt="Western Vintage"
           width={1152}
           height={576}
-          className="mt-8 w-full max-w-2xl"
+          className="reveal mt-6 w-full max-w-xl"
         />
-        </div>
-        <div className="border-t border-foreground pt-6">
-        <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          A vintage studio out of Ghana rehoming rare pieces and building considered looks, from
+        <p className="mt-7 max-w-xl text-base leading-relaxed text-cream/70 sm:text-lg">
+          A vintage studio out of Ghana rehoming rare pieces and building loud, tender looks — from
           gala runways to paint-splash sets and street-style archives.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -37,11 +41,10 @@ export function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="bg-transparent"
+            className="border-cream/25 bg-transparent text-cream hover:bg-cream hover:text-ink"
           >
             <a href="#contact">Get in Touch</a>
           </Button>
-        </div>
         </div>
       </div>
     </section>
@@ -70,10 +73,9 @@ export function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 border-b border-border px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
+      className="scroll-mt-24 px-5 py-16 sm:px-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-12"
     >
-      <div className="mx-auto max-w-[1440px] lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
-      <div className="overflow-hidden">
+      <div className="overflow-hidden rounded-3xl shadow-[var(--shadow-card)]">
         <img
           src={photo2.url}
           alt="The Western Vintage crew styled in thrifted looks"
@@ -82,16 +84,22 @@ export function About() {
         />
       </div>
       <div className="mt-8 lg:mt-0">
-        <p className="section-label">About us</p>
-        <h2 className="text-display mt-3 text-3xl sm:text-4xl">Lifestyle and culture of the West</h2>
+        <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">About us</p>
+        <h2 className="text-display mt-2 text-3xl sm:text-4xl">Lifestyle & culture of the West</h2>
         <p className="mt-5 leading-relaxed text-muted-foreground">
           Western Vintage is a youth-focused lifestyle and cultural experience celebrating vintage
           fashion, music, creativity, games, food and the unique culture of the Western Region.
         </p>
-        <div className="mt-8 grid grid-cols-2 border-y border-border text-xs font-semibold uppercase tracking-[0.08em] sm:grid-cols-3">
-          {["Vintage Fashion", "Music", "Creativity", "Games", "Food", "Culture"].map((t) => <span key={t} className="border-b border-border py-3 pr-3 last:border-b-0 sm:[&:nth-last-child(-n+3)]:border-b-0">{t}</span>)}
+        <div className="mt-7 flex flex-wrap gap-2">
+          {["Vintage Fashion", "Music", "Creativity", "Games", "Food", "Culture"].map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-gold/60 px-3 py-1 text-xs font-medium text-gold-deep"
+            >
+              {t}
+            </span>
+          ))}
         </div>
-      </div>
       </div>
     </section>
   );
@@ -124,20 +132,40 @@ export function Contact() {
   const [sending, setSending] = useState(false);
 
   return (
-    <section id="contact" className="scroll-mt-24 bg-ink px-5 py-20 text-cream sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-[1440px] lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+    <section id="contact" className="scroll-mt-24 px-5 py-16 sm:px-8 lg:px-12">
+      <div className="surface-ink rounded-[2rem] px-6 py-10 sm:px-10 lg:grid lg:grid-cols-[1fr_1.1fr] lg:gap-12">
         <div>
           <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Say hello</p>
           <h2 className="text-display mt-2 text-3xl text-cream sm:text-4xl">
-             Book a rack, a shoot, or a gala
+            Book a rack, a shoot, or a whole gala
           </h2>
           <p className="mt-4 max-w-md leading-relaxed text-cream/65">
             Tell us what you're building. We reply within two working days.
           </p>
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-[0.1em] text-cream/70">
-            <a href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="#contact">TikTok</a>
-            <a href="mailto:hello@westernvintage.com">Email</a>
+          <div className="mt-7 flex gap-3">
+            <a
+              href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Instagram className="size-5" />
+            </a>
+            <a
+              href="#contact"
+              aria-label="TikTok"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Music2 className="size-5" />
+            </a>
+            <a
+              href="mailto:hello@westernvintage.com"
+              aria-label="Email"
+              className="grid size-10 place-items-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold"
+            >
+              <Mail className="size-5" />
+            </a>
           </div>
         </div>
         <form
@@ -156,23 +184,24 @@ export function Contact() {
             required
             name="name"
             placeholder="Your name"
-            className="h-12 rounded-none border-cream/30 bg-transparent text-cream placeholder:text-cream/40"
+            className="h-12 rounded-xl border-cream/20 bg-cream/5 text-cream placeholder:text-cream/40"
           />
           <Input
             required
             type="email"
             name="email"
             placeholder="Email address"
-            className="h-12 rounded-none border-cream/30 bg-transparent text-cream placeholder:text-cream/40"
+            className="h-12 rounded-xl border-cream/20 bg-cream/5 text-cream placeholder:text-cream/40"
           />
           <Textarea
             required
             name="message"
             rows={5}
             placeholder="What do you have in mind?"
-            className="rounded-none border-cream/30 bg-transparent text-cream placeholder:text-cream/40"
+            className="rounded-xl border-cream/20 bg-cream/5 text-cream placeholder:text-cream/40"
           />
           <Button type="submit" variant="hero" size="lg" disabled={sending} className="w-full">
+            <Send className="size-4" />
             {sending ? "Sending…" : "Send message"}
           </Button>
         </form>
@@ -197,9 +226,22 @@ export function Footer() {
           © {new Date().getFullYear()} Western Vintage. All rights reserved.
         </p>
       </div>
-      <div className="flex shrink-0 gap-5 text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-        <a href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="mailto:hello@westernvintage.com">Email</a>
+      <div className="flex shrink-0 gap-3 text-muted-foreground">
+        <a
+          href="https://www.instagram.com/western_vintage_?igsi=OWU5aWViOXkzb3Rw"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
+          className="hover:text-gold-deep"
+        >
+          <Instagram className="size-5" />
+        </a>
+        <a href="#contact" aria-label="TikTok" className="hover:text-gold-deep">
+          <Music2 className="size-5" />
+        </a>
+        <a href="mailto:hello@westernvintage.com" aria-label="Email" className="hover:text-gold-deep">
+          <Mail className="size-5" />
+        </a>
       </div>
     </footer>
   );

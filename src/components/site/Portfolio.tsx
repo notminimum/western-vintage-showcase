@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { categories, projects, reels, type Category } from "./data";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export function Portfolio() {
   const [filter, setFilter] = useState<Category>("All");
@@ -24,18 +25,20 @@ export function Portfolio() {
 
       <div className="mt-6 flex flex-wrap gap-2">
         {categories.map((c) => (
-          <button
+          <Button
             key={c}
+            type="button"
+            variant="ghost"
             onClick={() => setFilter(c)}
             className={cn(
-              "rounded-full border px-4 py-2 text-sm font-medium transition-all",
+              "h-auto rounded-full border px-4 py-2 text-sm font-medium transition-all",
               filter === c
                 ? "border-transparent bg-ink text-cream"
                 : "border-border bg-card text-foreground hover:border-gold hover:text-gold-deep",
             )}
           >
             {c}
-          </button>
+          </Button>
         ))}
       </div>
 

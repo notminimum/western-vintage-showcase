@@ -18,6 +18,8 @@ export const Route = createFileRoute("/")({
         content:
           "Rare sourced pieces, editorial styling and gala production from a Ghana-based vintage studio.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,

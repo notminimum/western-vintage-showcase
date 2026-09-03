@@ -4,7 +4,10 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/western-vintage-logo.png.asset.json";
+import introCoast from "@/assets/intro-coast.jpg.asset.json";
+import introRuins from "@/assets/intro-ruins.jpg.asset.json";
+import introPalms from "@/assets/intro-palms.jpg.asset.json";
 import { services, stats } from "./data";
 import photo2 from "@/assets/photo_2.jpg.asset.json";
 
@@ -12,39 +15,31 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="surface-ink relative scroll-mt-24 overflow-hidden rounded-b-[2.5rem] px-5 pb-16 pt-14 sm:px-8 lg:px-12 lg:pt-20"
+      className="relative scroll-mt-24 overflow-hidden bg-ink px-4 pb-5 pt-4 sm:px-6 sm:pb-7 sm:pt-6 lg:min-h-[calc(100vh-2rem)] lg:px-8 lg:py-8"
     >
-      <div
-        aria-hidden
-        className="absolute -right-24 -top-24 size-80 rounded-full bg-gold/20 blur-3xl"
-      />
-      <div className="relative max-w-3xl">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold">
-          Curated thrift · Styling · Culture
-        </p>
-        <img
-          src={logo}
-          alt="Western Vintage"
-          width={1152}
-          height={576}
-          className="reveal mt-6 w-full max-w-xl"
-        />
-        <p className="mt-7 max-w-xl text-base leading-relaxed text-cream/70 sm:text-lg">
-          A vintage studio out of Ghana rehoming rare pieces and building loud, tender looks — from
-          gala runways to paint-splash sets and street-style archives.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild variant="hero" size="lg">
-            <a href="#portfolio">View Work</a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-cream/25 bg-transparent text-cream hover:bg-cream hover:text-ink"
-          >
-            <a href="#contact">Get in Touch</a>
-          </Button>
+      <div className="grid min-h-[560px] grid-cols-2 grid-rows-[1fr_1.15fr] gap-2 sm:min-h-[680px] sm:grid-cols-[0.9fr_1.2fr_0.9fr] sm:grid-rows-1 sm:gap-3 lg:min-h-[calc(100vh-4rem)]">
+        <figure className="relative overflow-hidden rounded-lg sm:col-auto">
+          <img src={introCoast.url} alt="Western Vintage styling on the Ghanaian coast" className="h-full w-full object-cover" />
+        </figure>
+        <figure className="relative overflow-hidden rounded-lg">
+          <img src={introRuins.url} alt="Western Vintage cowboy styling among coastal ruins" className="h-full w-full object-cover" />
+        </figure>
+        <figure className="relative col-span-2 overflow-hidden rounded-lg sm:col-span-1">
+          <img src={introPalms.url} alt="Western Vintage look photographed beneath palm trees" className="h-full w-full object-cover" />
+        </figure>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/20" />
+        <div className="absolute inset-x-5 bottom-8 z-10 sm:inset-x-10 sm:bottom-12 lg:inset-x-14">
+          <img src={logo.url} alt="Western Vintage" width={768} height={768} className="reveal size-32 rounded-full shadow-2xl sm:size-44 lg:size-52" />
+          <div className="mt-5 flex flex-col items-start gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-cream">Western Region · Ghana</p>
+              <p className="mt-2 max-w-lg text-sm leading-relaxed text-cream/80 sm:text-base">Vintage fashion, music and culture—styled from the coast.</p>
+            </div>
+            <div className="flex gap-2">
+              <Button asChild variant="hero" size="lg"><a href="#portfolio">View Work</a></Button>
+              <Button asChild size="lg" variant="outline" className="border-cream/40 bg-ink/30 text-cream backdrop-blur-sm hover:bg-cream hover:text-ink"><a href="#contact">Get in Touch</a></Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -215,7 +210,7 @@ export function Footer() {
     <footer className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 border-t border-border px-5 py-10 sm:px-8 lg:px-12">
       <div className="min-w-0">
         <img
-          src={logo}
+          src={logo.url}
           alt="Western Vintage"
           width={1152}
           height={576}

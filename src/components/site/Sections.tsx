@@ -29,7 +29,9 @@ export function Hero() {
         </figure>
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/20" />
         <div className="absolute inset-x-5 bottom-8 z-10 sm:inset-x-10 sm:bottom-12 lg:inset-x-14">
-          <img src={logo.url} alt="Western Vintage" width={768} height={768} className="reveal size-32 rounded-full shadow-2xl sm:size-44 lg:size-52" />
+          <h1>
+            <img src={logo.url} alt="Western Vintage" width={768} height={768} className="reveal size-32 rounded-full shadow-2xl sm:size-44 lg:size-52" />
+          </h1>
           <div className="mt-5 flex flex-col items-start gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-cream">Western Region · Ghana</p>

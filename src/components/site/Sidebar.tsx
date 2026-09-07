@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Instagram, Music2, Mail } from "lucide-react";
-import logo from "@/assets/western-vintage-logo.png.asset.json";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -55,7 +54,7 @@ export function Sidebar() {
       {/* Mobile bar */}
       <header className="surface-ink sticky top-0 z-50 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 lg:hidden">
         <a href="#home" className="min-w-0">
-          <img src={logo.url} alt="Western Vintage" width={768} height={768} className="size-10 rounded-full" />
+          <img src="/images/western-vintage-logo.png" alt="Western Vintage" width={768} height={768} className="size-10 rounded-full" />
         </a>
         <button
           aria-label="Toggle menu"
@@ -74,7 +73,7 @@ export function Sidebar() {
         <div>
           <a href="#home" className="block">
             <img
-              src={logo.url}
+              src="/images/western-vintage-logo.png"
               alt="Western Vintage"
               width={768}
               height={768}

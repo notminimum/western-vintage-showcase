@@ -1,7 +1,3 @@
-import photo1 from "@/assets/photo_1.jpg.asset.json";
-import photo2 from "@/assets/photo_2.jpg.asset.json";
-import photo6 from "@/assets/photo_6.jpg.asset.json";
-import photo7 from "@/assets/photo_7.jpg.asset.json";
 import reel1 from "@/assets/reel_1.mp4.asset.json";
 import reel2 from "@/assets/reel_2.mp4.asset.json";
 import reel3 from "@/assets/reel_3.mp4.asset.json";
@@ -24,7 +20,7 @@ export const projects: Project[] = [
     title: "Gala Host — Paint-Splash Set",
     category: "Photography",
     year: "2025",
-    image: photo1.url,
+    image: "/images/photo_1.jpg",
     tall: true,
   },
   {
@@ -32,14 +28,14 @@ export const projects: Project[] = [
     title: "The Thrift Crew Lineup",
     category: "Editorial",
     year: "2025",
-    image: photo2.url,
+    image: "/images/photo_2.jpg",
   },
   {
     id: "denim",
     title: "Denim & Cowboy Boots",
     category: "Editorial",
     year: "2025",
-    image: photo6.url,
+    image: "/images/photo_6.jpg",
     tall: true,
   },
   {
@@ -47,7 +43,7 @@ export const projects: Project[] = [
     title: "Western Vintage Archway",
     category: "Photography",
     year: "2025",
-    image: photo7.url,
+    image: "/images/photo_7.jpg",
   },
 ];
 

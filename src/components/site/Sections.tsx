@@ -4,12 +4,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import logo from "@/assets/western-vintage-logo.png.asset.json";
-import introCoast from "@/assets/intro-coast.jpg.asset.json";
-import introRuins from "@/assets/intro-ruins.jpg.asset.json";
-import introPalms from "@/assets/intro-palms.jpg.asset.json";
 import { services, stats } from "./data";
-import photo2 from "@/assets/photo_2.jpg.asset.json";
 
 export function Hero() {
   return (
@@ -19,18 +14,18 @@ export function Hero() {
     >
       <div className="grid min-h-[560px] grid-cols-2 grid-rows-[1fr_1.15fr] gap-2 sm:min-h-[680px] sm:grid-cols-[0.9fr_1.2fr_0.9fr] sm:grid-rows-1 sm:gap-3 lg:min-h-[calc(100vh-4rem)]">
         <figure className="relative overflow-hidden rounded-lg sm:col-auto">
-          <img src={introCoast.url} alt="Western Vintage styling on the Ghanaian coast" className="h-full w-full object-cover" />
+          <img src="/images/intro-coast.jpg" alt="Western Vintage styling on the Ghanaian coast" className="h-full w-full object-cover" />
         </figure>
         <figure className="relative overflow-hidden rounded-lg">
-          <img src={introRuins.url} alt="Western Vintage cowboy styling among coastal ruins" className="h-full w-full object-cover" />
+          <img src="/images/intro-ruins.jpg" alt="Western Vintage cowboy styling among coastal ruins" className="h-full w-full object-cover" />
         </figure>
         <figure className="relative col-span-2 overflow-hidden rounded-lg sm:col-span-1">
-          <img src={introPalms.url} alt="Western Vintage look photographed beneath palm trees" className="h-full w-full object-cover" />
+          <img src="/images/intro-palms.jpg" alt="Western Vintage look photographed beneath palm trees" className="h-full w-full object-cover" />
         </figure>
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/20" />
         <div className="absolute inset-x-5 bottom-8 z-10 sm:inset-x-10 sm:bottom-12 lg:inset-x-14">
           <h1>
-            <img src={logo.url} alt="Western Vintage" width={768} height={768} className="reveal size-32 rounded-full shadow-2xl sm:size-44 lg:size-52" />
+            <img src="/images/western-vintage-logo.png" alt="Western Vintage" width={768} height={768} className="reveal size-32 rounded-full shadow-2xl sm:size-44 lg:size-52" />
           </h1>
           <div className="mt-5 flex flex-col items-start gap-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -74,7 +69,7 @@ export function About() {
     >
       <div className="overflow-hidden rounded-3xl shadow-[var(--shadow-card)]">
         <img
-          src={photo2.url}
+          src="/images/photo_2.jpg"
           alt="The Western Vintage crew styled in thrifted looks"
           loading="lazy"
           className="h-full w-full object-cover"
@@ -212,7 +207,7 @@ export function Footer() {
     <footer className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 border-t border-border px-5 py-10 sm:px-8 lg:px-12">
       <div className="min-w-0">
         <img
-          src={logo.url}
+          src="/images/western-vintage-logo.png"
           alt="Western Vintage"
           width={1152}
           height={576}
